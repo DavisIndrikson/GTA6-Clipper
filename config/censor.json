@@ -1,0 +1,6 @@
+{
+ "_note": "Regexes matched against whole words. 'mask' words get asterisks in captions; 'bleep' words also get an audio bleep (style.censor.bleep_slurs).",
+ "mask": ["f+u+c*k+(s|ed|er|ers|in|ing|in'|ery)?", "motherf+u+c*k+(a|as|er|ers|in|ing)?", "sh+i+t+(s|ty|ted|ting)?",
+          "bullsh+i+t+", "b+i+t+c+h+(es|ass)?", "c+u+n+t+s?", "d+i+c+k+(s|head)?", "p+u+s+s+y+", "a+s+s+h+o+l+e+s?"],
+ "bleep": ["n+[i1!]+g+g+(a|ah|as|az|er|ers|uh|uhs)?", "f+[a@]+g+(s|got|gots|gy)?", "r+e+t+a+r+d+(s|ed)?"]
+}

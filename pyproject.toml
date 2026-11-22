@@ -1,0 +1,39 @@
+[project]
+name = "gta6-clipper"
+version = "0.1.0"
+description = "Finds the funniest moments in long GTA 6 streams and cuts them into vertical clips with captions and sound effects."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy>=1.26,<2.3",
+  "scipy>=1.11",
+  "opencv-python-headless>=4.9",
+  "pillow>=10.3",
+  "soundfile>=0.12",
+  "faster-whisper>=1.1",
+  "torch>=2.4",
+  "panns-inference>=0.1.1",
+  "editables>=0.5",   # runtime half of the editable install hook (see [tool.hatch.build])
+]
+
+[project.scripts]
+clip = "clipper.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+# Editable install through an import hook (a .py file) instead of a plain path in a .pth file: Python 3.11 reads
+# .pth files in the Windows code page, which breaks folders with non-ASCII letters (e.g. a user name with an umlaut).
+dev-mode-exact = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["clipper"]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

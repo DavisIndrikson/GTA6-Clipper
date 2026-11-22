@@ -1,0 +1,5 @@
+{
+ "prompt": "GTA 6 livestream. IShowSpeed, Speed, Kai Cenat, N3ON, chat. Vice City, Leonida, Lucia, Jason, Rockstar.",
+ "fix": {"ishowspeed": "IShowSpeed", "i show speed": "IShowSpeed", "kai cenat": "Kai Cenat", "neon": "N3ON",
+         "gta six": "GTA 6", "gta vi": "GTA 6", "vice city": "Vice City", "lucia": "Lucia", "leonida": "Leonida"}
+}
